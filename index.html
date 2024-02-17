@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Builders</title>
+        <link rel="icon" href="images/11.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/911178bb44.js" crossorigin="anonymous"></script>
+        <!-- --------------------------- css work is here --------------------------- -->
+        <style>
+            *{
+                font-family:  sans-serif;
+                transition: .5s;
+            }
+            .border1{
+                border: 1px solid #16a34a;
+            }
+            .bg-img{
+                background: linear-gradient(rgba(255, 0, 0, 0),rgba(255, 0, 0, 0)),url(images/banner.png);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .bdrB{
+                border-bottom: 3px solid #16a34a;
+            }
+        </style>
+        <!-- --------------------------- tailowind css cdn link --------------------------- -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+        <!-- --------------------------- talowind custom color maker --------------------------- -->
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    clifford: '#da373d',
+                  },
+                }
+              }
+            }
+          </script>
+    
+    </head>
+<body>
+    <header class="w-full mb-4">
+        <nav class="container mx-auto">
+        <div class="navbar">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a> Home </a></li>
+                <li><a> About </a></li>
+                <li><a> Destination </a></li>
+                <li><a> Search </a></li>
+                </ul>
+              </div>
+              <a class="font-bold btn-ghost text-xl md:text-3xl"><span class="text-green-600 text-xl md:text-3xl">E-</span>Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a> Home </a></li>
+                <li><a> About </a></li>
+                <li><a> Destination </a></li>
+                <li><a> Search </a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="bg-green-100 font-bold gap-3 p-2 px-4 hover:bg-green-200 flex rounded-md border1 text-green-600 cursor-pointer">Bus <img src="images/bus-icon.png" alt="bus"></a>
+            </div>
+          </div>
+    </nav>
+
+    <!-- ---------------------------end nev bar ---------------------------- -->
+
+    <div class="container mx-auto rounded-xl min-h-[550px] bg-img p-4 pt-16 flex flex-col justify-center items-center">
+        <h1 class="text-3xl md:text-6xl text-center text-white font-bold">End-to-End Travel with</h1>
+        <h1 class="text-3xl md:text-6xl text-center text-green-600 font-bold my-8">Enjoy Paribahan</h1>
+        <p class="text-center mx-auto p-2 md:w-[650px] text-white">Lorem ipsum dolor lit. ullam odio accusantium in unde magni, aliquid repellendus minima omnis suscipit numquam nihil, quos, quidem officiis saepe.</p>
+        <button class="btn bg-green-600 border-0 m-7 w-40 font-bold text-white">Buy Tickets</button>
+    </div>
+
+    <!-- --------------------------- banner end ----------------------------  -->
+
+    <div class="max-w-full mx-auto flex justify-center items-center flex-col md:flex-row gap-3 md:gap-6 m-4 md:-mt-14">
+        <div class="p-6 rounded-2xl shadow-sm flex justify-center items-center gap-5 bg-white bdrB">
+            <img src="images/people.png" alt="">
+            <div class="">
+                <h1 class="text-3xl text-black">500K+</h1>
+                <span class="text-natural-500">Registered users</span>
+            </div>
+        </div>
+        <div class="p-6 rounded-2xl shadow-sm justify-center items-center flex gap-5 bg-white bdrB">
+            <img src="images/ticket-cupon.png" alt="">
+            <div class="">
+                <h1 class="text-3xl text-black">1.7 lacks</h1>
+                <span class="text-natural-500">Tickets sold</span>
+            </div>
+        </div>
+        <div class="p-6 rounded-2xl shadow-sm justify-center items-center flex gap-5 bg-white bdrB">
+            <img src="images/stoppage.png" alt="">
+            <div class="">
+                <h1 class="text-3xl text-black">80K+</h1>
+                <span class="text-natural-500">Rental partners</span>
+            </div>
+        </div>
+    </div>
+
+    </header>
+
+    <main>
+        <section class="container mx-auto flex flex-col items-center px-4 py-10">
+            <h1 class="text-center text-3xl text-black mb-5">Best offers for you </h1>
+            <div class="w-full flex justify-between items-center flex-col md:flex-row gap-8 pt-5">
+                <div class="rounded-2xl w-full flex bg-yellow-500 h-48">
+                    <div class="min-w-[55%] p-9 flex flex-col justify-center gap-1">
+                        <h1 class="text-2xl md:text-3xl font-extrabold">15% OFF</h1>
+                        <p class="text-black font-bold">on your next purchase</p>
+                        <span class=" text-natural-500">use by January 2024</span>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="" class="h-full">
+                    <div class="py-9 flex flex-col justify-center gap-1">
+                        <h1 class="text-2xl md:text-3xl font-extrabold">NEW15</h1>
+                        <span class=" text-natural-500">Coupon Code</span>
+                    </div>
+                </div>
+                <div class="rounded-2xl w-full flex bg-pink-400 h-48">
+                    <div class="min-w-[55%] p-9 flex flex-col justify-center gap-1">
+                        <h1 class="text-2xl md:text-3xl font-extrabold">20% OFF</h1>
+                        <p class="text-black font-bold">on your next purchase</p>
+                        <span class=" text-natural-500">use by January 2024</span>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="" class="h-full">
+                    <div class="py-9 flex flex-col justify-center gap-1">
+                        <h1 class=" text-2xl md:text-3xl font-extrabold">Couple 20</h1>
+                        <span class=" text-natural-500">Coupon Code</span>
+                    </div>
+                </div>
+            </div>
+            <button class="border1 mt-10 rounded p-2 hover:bg-green-200 px-5 m-4 font-bold text-green-600">See All Offers</button>
+        </section>
+        <section class="w-full my-8 p-10 rounded-3xl" style="border-top: 3px solid #16a34a;">
+            <h1 class="text-3xl text-center m-5 font-bold">Enjoy Paribahan</h1>
+            <p class="w-full px-2 md:w-[650px] mx-auto text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo iusto sunt laboriosam dicta quam asperiores.</p>
+            <div class="container mx-auto mt-5 flex flex-col md:flex-row">
+                <div class="">
+                    <div class=""></div>
+                    <div class=""></div>
+                    <div class=""></div>
+                    <div class=""></div>
+                </div>
+                <div class=""></div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
