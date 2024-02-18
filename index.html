@@ -8,13 +8,20 @@
         <link rel="icon" href="images/11.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/911178bb44.js" crossorigin="anonymous"></script>
         <!-- --------------------------- css work is here --------------------------- -->
         <style>
             *{
-                font-family:  sans-serif;
-                transition: .5s;
+                /* font-family:  sans-serif; */
+                font-family: "Raleway", sans-serif;
+                transition: all .5s;
+            }
+            .active{
+                display: block !important;
+            }
+            .bgActive{
+                background: #16a34a !important;
             }
             .border1{
                 border: 1px solid #16a34a;
@@ -85,7 +92,7 @@
         <h1 class="text-3xl md:text-6xl text-center text-white font-bold">End-to-End Travel with</h1>
         <h1 class="text-3xl md:text-6xl text-center text-green-600 font-bold my-8">Enjoy Paribahan</h1>
         <p class="text-center mx-auto p-2 md:w-[650px] text-white">Lorem ipsum dolor lit. ullam odio accusantium in unde magni, aliquid repellendus minima omnis suscipit numquam nihil, quos, quidem officiis saepe.</p>
-        <button class="btn bg-green-600 border-0 m-7 w-40 font-bold text-white">Buy Tickets</button>
+        <a href="#byTiket" class="btn bg-green-600 border-0 m-7 w-40 font-bold text-white">Buy Tickets</a>
     </div>
 
     <!-- --------------------------- banner end ----------------------------  -->
@@ -147,7 +154,7 @@
             </div>
             <button class="border1 mt-10 rounded p-2 hover:bg-green-200 px-5 m-4 font-bold text-green-600">See All Offers</button>
         </section>
-        <section class="w-full my-8 p-10 rounded-3xl bg-gray-100" style="border-top: 3px solid #16a34a;">
+        <section id="byTiket" class="w-full my-8 p-10 rounded-3xl bg-gray-100" style="border-top: 3px solid #16a34a;">
             <h1 class="text-3xl text-center m-5 font-bold">Enjoy Paribahan</h1>
             <p class="w-full px-2 md:w-[650px] mx-auto text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo iusto sunt laboriosam dicta quam asperiores.</p>
             <div class="container mx-auto mt-5 gap-0 flex justify-center items-center flex-col rounded-2xl bg-white md:flex-row w-full ">
@@ -160,7 +167,7 @@
                                 <span class=" text-natural-500">Coach-009-WEB ! AC_Business</span>
                             </div>
                         </div>
-                        <button class="btn bg-green-100 flex m-5 text-green-600"><img src="images/seat-green-filled.png" alt=""> 40seat left</button>
+                        <button class="btn bg-green-100 flex m-5 text-green-600"><img src="images/seat-green-filled.png" alt=""><span id="setLeft"></span>Seat left</button>
                     </div>
                     <div class="flex justify-between items-center p-4" style="border-bottom: 1px dashed #4b4b4b63;">
                         <p class=" text-natural-500">Route</p>
@@ -194,7 +201,7 @@
                             <p class="flex gap-3 justify-center items-center btn text-natural-500"><img src="images/seat-gray.png" alt=""> Available</p>
                             <p class="flex gap-3 justify-center items-center btn text-green-500 font-bold"><img src="images/seat-green-filled.png" alt=""> Selected </p>
                         </div>
-                        <div class="w-full mt-8">
+                        <div id="fullBus" class="w-full mt-8">
                             <div class="w-full grid grid-cols-10 gap-2">
                                 <span class="w-full p-2 text-center"></span>
                                 <span class="w-full p-2 text-center col-span-2"></span>
@@ -205,83 +212,83 @@
                             </div>
                             <div class="w-full grid grid-cols-10 gap-2 mt-3">
                                 <span class="w-full p-2 text-center rounded-md">A</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A1</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A2</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A2</span>
                                 <span class="w-full p-2 text-center rounded-md"></span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A3</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A4</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A4</span>
                             </div>
                             <div class="w-full grid grid-cols-10 gap-2 mt-3">
                                 <span class="w-full p-2 text-center rounded-md">B</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B1</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B2</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B2</span>
                                 <span class="w-full p-2 text-center rounded-md"></span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B3</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B4</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B4</span>
                             </div>
                             <div class="w-full grid grid-cols-10 gap-2 mt-3">
                                 <span class="w-full p-2 text-center rounded-md">C</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C1</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C2</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C2</span>
                                 <span class="w-full p-2 text-center rounded-md"></span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C3</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C4</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C4</span>
                             </div>
                             <div class="w-full grid grid-cols-10 gap-2 mt-3">
                                 <span class="w-full p-2 text-center rounded-md">D</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D1</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D2</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D2</span>
                                 <span class="w-full p-2 text-center rounded-md"></span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D3</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D4</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D4</span>
                             </div>
                             <div class="w-full grid grid-cols-10 gap-2 mt-3">
                                 <span class="w-full p-2 text-center rounded-md">E</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E1</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E2</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E2</span>
                                 <span class="w-full p-2 text-center rounded-md"></span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E3</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E4</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E4</span>
                             </div>
                             <div class="w-full grid grid-cols-10 gap-2 mt-3">
                                 <span class="w-full p-2 text-center rounded-md">F</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F1</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F2</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F2</span>
                                 <span class="w-full p-2 text-center rounded-md"></span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F3</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F4</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F4</span>
                             </div>
                             <div class="w-full grid grid-cols-10 gap-2 mt-3">
                                 <span class="w-full p-2 text-center rounded-md">G</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G1</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G2</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G2</span>
                                 <span class="w-full p-2 text-center rounded-md"></span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G3</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G4</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G4</span>
                             </div>
                             <div class="w-full grid grid-cols-10 gap-2 mt-3">
                                 <span class="w-full p-2 text-center rounded-md">H</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H1</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H2</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H2</span>
                                 <span class="w-full p-2 text-center rounded-md"></span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H3</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H4</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H4</span>
                             </div>
                             <div class="w-full grid grid-cols-10 gap-2 mt-3">
                                 <span class="w-full p-2 text-center rounded-md">I</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I1</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I2</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I2</span>
                                 <span class="w-full p-2 text-center rounded-md"></span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I3</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I4</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I4</span>
                             </div>
                             <div class="w-full grid grid-cols-10 gap-2 mt-3">
                                 <span class="w-full p-2 text-center rounded-md">J</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J1</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J2</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J2</span>
                                 <span class="w-full p-2 text-center rounded-md"></span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J3</span>
-                                <span class="w-full p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J4</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J4</span>
                             </div>
                             
                         </div>
@@ -298,27 +305,19 @@
                             <small class="text-black">Class</small>
                             <small class="text-black">Price</small>
                         </div>
+                        <div id="selectedSeat" class="w-full"></div>
+                        <hr/>
                         <div class="flex justify-between items-center p-2">
-                            <small class="text-black">Class</small>
-                            <small class="text-black">Price</small>
-                            <small class="text-black">Price</small>
+                            <small class="text-black font-bold">Total Price</small>
+                            <small class="text-black font-bold">BDT <span id="totalPriceadd"></span></small>
+                        </div>
+                        <div id="copenInput" class="w-full bg-white my-4 hidden rounded-md relative p-1">
+                            <input type="text" id="getCopne" placeholder="Have Any Copupon?" class="input w-full pr-10">
+                            <input type="submit" id="applyCopne" value="Apply" class="input absolute right-1 bg-green-600">
                         </div>
                         <div class="flex justify-between items-center p-2">
-                            <small class="text-black">Class</small>
-                            <small class="text-black">Price</small>
-                            <small class="text-black">Price</small>
-                        </div><hr/>
-                        <div class="flex justify-between items-center p-2">
-                            <small class="text-black">Class</small>
-                            <small class="text-black">Price</small>
-                        </div>
-                        <div class="w-full bg-white my-4 rounded-md relative p-1">
-                            <input type="text" placeholder="Have Any Copupon?" class="input w-full pr-10">
-                            <input type="submit" value="Apply" class="input absolute right-1 bg-green-600">
-                        </div>
-                        <div class="flex justify-between items-center p-2">
-                            <small class="text-black">Class</small>
-                            <small class="text-black">Price</small>
+                            <small class="text-black font-bold">Grand Total</small>
+                            <small class="text-black font-bold">BTD <span id="GrandTotal"></span></small>
                         </div>
                     </div>
                     <form action="" class="my-2 px-2 p-1">
@@ -326,12 +325,12 @@
                             <input type="text" placeholder="Enter Your Name" class="input bg-gray-100 w-full m-4">
                         </label>
                         <label for="name">Phone Number*
-                            <input type="text" placeholder="Enter Phone Number" class="input bg-gray-100 w-full m-4">
+                            <input type="number" id="NumberBox" onchange="handleChange(this)" placeholder="Enter Phone Number" class="input bg-gray-100 w-full m-4">
                         </label>
                         <label for="name">Email Id
                             <input type="text" placeholder="Enter Email Id" class="input bg-gray-100 w-full m-4">
                         </label>
-                        <label for="name">
+                        <label for="name" id="submit" class="hidden">
                             <input type="submit" value="Next" class="input w-full m-4 bg-green-600">
                         </label>
                     </form>
