@@ -8,6 +8,9 @@ const getCopne = document.getElementById("getCopne");
 const applyCopne = document.getElementById("applyCopne");
 const NumberBox = document.getElementById("NumberBox");
 const submit = document.getElementById("submit");
+const Complite = document.getElementById("Complite");
+const closes = document.getElementById("close");
+const setnumber = document.getElementById("setnumber");
 const coupon1 = 'NEW15'
 const coupon2 = 'Couple 20';
 let totalAmount = 0;
@@ -18,6 +21,22 @@ let totalSet = 40;
 
 setLeft.innerHTML= totalSet
 
+submit.addEventListener('click', () => {
+    Complite.classList.add('active');
+})
+
+closes.addEventListener('click', () => {
+    Complite.classList.remove('active')
+})
+
+NumberBox.addEventListener('change', () => {
+    if (NumberBox !== '') {
+        submit.classList.add('active');
+        submit.classList.remove('hidden')
+    }else{
+        submit.classList.remove('active')
+    }
+})
 
 applyCopne.addEventListener('click' , () => {
     if (getCopne.value == coupon1) {
@@ -41,6 +60,7 @@ seats.forEach(element => {
         totalSet = totalSet - 1
         totalAmount = seatCount * 550 
         setLeft.innerHTML= totalSet
+        setnumber.innerText = seatCount
         const seatnumber = element.textContent
         totalPriceadd.innerText = totalAmount
         GrandTotal.innerText = totalAmount
