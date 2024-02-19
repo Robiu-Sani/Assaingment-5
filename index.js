@@ -24,11 +24,7 @@ let totalSet = 40;
 
 
 setLeft.innerHTML= totalSet
-submit.style.pointerEvents = "none";
-
-submit.addEventListener('click', () => {
-    Complite.classList.add('active');
-})
+submit.style.cursor = "no-drop";
 
 NumberBox.addEventListener('input', () => {
     SubmitBtnWork();
@@ -75,6 +71,15 @@ seats.forEach(element => {
     });
 }); 
 
+submit.addEventListener('click', () => {
+    if (NumberBox.value !== "" && seatCount !== 0) {
+        Complite.classList.add('active');
+    }else{
+        alert('You must hove to fill the Your number box by your number')
+    }
+    
+})
+
 
 function OfferSystem(){
     if (getCopne.value == coupon1) {
@@ -95,12 +100,15 @@ function OfferSystem(){
 function SubmitBtnWork(){
     if (seatCount == 0) {
         alert('You have to select any Available seat')
+        NumberBox.value = ""
     } else {
         if (NumberBox.value !== "" && seatCount !== 0) {
             submit.style.background = '#16a34a';
             submit.style.pointerEvents = "auto";
+            submit.style.cursor = "pointer";
         }else{
-            submit.classList.remove('active')
+            submit.style.background = 'gray';
+            submit.style.cursor = "no-drop";
         }
     }
 }
